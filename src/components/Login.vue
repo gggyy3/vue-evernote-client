@@ -3,7 +3,9 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
-          <div class="main"></div>
+          <div class="main">
+            <img src="@/assets/ice.jpg" alt="" />
+          </div>
           <div class="form">
             <h3 @click="showRegister">创建账户</h3>
             <transition name="slide">
@@ -51,7 +53,7 @@
 </template>
 
 <script>
-import {mapGetters, mapActions} from 'vuex'
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   data() {
@@ -74,8 +76,8 @@ export default {
   },
   methods: {
     ...mapActions({
-      'loginUser': 'login',
-      'registerUser': 'register'
+      loginUser: "login",
+      registerUser: "register"
     }),
     showLogin() {
       this.isShowLogin = true;
@@ -194,10 +196,13 @@ export default {
 
   .main {
     flex: 1;
-    background: #36bc64
-      url(//cloud.hunger-valley.com/17-12-13/38476998.jpg-middle) center center
-      no-repeat;
-    background-size: contain;
+    background: url("../assets/background.jpg") center;
+    // url(//cloud.hunger-valley.com/17-12-13/38476998.jpg-middle) center center no-repeat;
+    // background-size: contain;
+    img {
+      margin-top: 73px;
+      width: 100%;
+    }
   }
   .form {
     width: 270px;
@@ -218,7 +223,7 @@ export default {
     }
 
     .button {
-      background-color: #2bb964;
+      background-color: #6699cc;
       height: 36px;
       line-height: 36px;
       text-align: center;
